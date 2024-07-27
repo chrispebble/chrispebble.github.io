@@ -32,6 +32,14 @@ function drawScene1(data) {
     svg.append("g")
         .call(d3.axisLeft(y));
 
+    svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "end")
+        .attr("y", 6)
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .text("# events");
+
     // Add the area
     svg.append("path")
         .datum(monthlyData)
