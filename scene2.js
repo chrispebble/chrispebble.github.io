@@ -86,6 +86,14 @@ function drawScene2(data) {
     svg.append("g")
         .call(d3.axisLeft(y));
 
+    svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "end")
+        .attr("y", 6)
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .text("# events");
+
     // Color scale
     var customColorScheme = [
         "#9f9f9f", //grey
